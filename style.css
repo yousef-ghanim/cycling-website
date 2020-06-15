@@ -12,10 +12,13 @@ html {
 .nav-links {
   margin: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  position: sticky;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  padding-left: 10rem;
+  z-index: 10;
 }
 .nav-links a {
   text-decoration: none;
@@ -23,16 +26,27 @@ html {
   color: white;
   text-transform: uppercase;
   padding: 2rem 3rem;
+  text-align: center;
 }
+.logo {
+  position: fixed;
+  width: 4.5rem;
+  top: 1rem;
+  left: 4rem;
+  cursor: pointer;
+  margin-right: 3rem;
+  z-index: 20;
+}
+
 .nav-links a:hover {
   color: rgb(224, 224, 224);
 }
 .nav-btn {
-  position: absolute;
+  position: fixed;
   top: 1rem;
   right: 1rem;
   padding: 0.3rem;
-  z-index: 10;
+  z-index: 20;
   display: none;
   cursor: pointer;
 }
@@ -58,7 +72,8 @@ html {
 .banner-container {
   position: relative;
   height: 100vh;
-  background: url(./images/pexels-photo-258045.jpeg) center no-repeat;
+  background: url(./images/pexels-photo-258045.jpeg) center no-repeat fixed;
+
   background-size: cover;
   overflow-x: hidden;
 }
@@ -84,18 +99,22 @@ html {
 @media (max-width: 720px) {
   .nav-links {
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     width: 35%;
     right: 0;
     text-align: center;
     height: 100%;
     transform: translateX(100%);
     transition: all 0.3s ease;
+    padding: 0;
   }
   .banner-text {
     padding: 0;
     width: 50%;
-    top: 10%;
+    top: 20%;
+  }
+  .logo {
+    left: 1rem;
   }
   .banner-text h1 {
     font-size: 5rem;
@@ -112,3 +131,67 @@ html {
 }
 
 /* end of banner */
+/* article */
+#article {
+  padding: 5rem 5rem 10rem 5rem;
+  background-color: lavender;
+}
+.article-container {
+  margin: 0 10rem;
+}
+.article-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5rem 0;
+  position: relative;
+}
+
+.article-img {
+  width: 50%;
+  height: 100%;
+}
+.img-frame {
+  position: absolute;
+  border: 0.3rem solid rgb(247, 191, 226);
+  height: 100%;
+  width: 50%;
+  margin: 3rem 0 0 3em;
+}
+
+.article-img2 {
+  width: 30%;
+}
+.img-frame2 {
+  position: absolute;
+  border: 0.3rem solid rgb(228, 235, 135);
+  height: 100%;
+  width: 30%;
+  margin: 2rem;
+  right: 0;
+}
+.article-text {
+  position: relative;
+  margin-left: 5rem;
+  width: 40%;
+}
+.article-text h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-transform: capitalize;
+  color: rgb(107, 107, 107);
+  font-weight: 400;
+}
+.article-text p {
+  font-size: 1.5rem;
+  color: rgb(107, 107, 107);
+  line-height: 3rem;
+}
+.article-text a {
+  position: absolute;
+  right: 2rem;
+  font-size: 1.5rem;
+}
+
+/* end of article */
