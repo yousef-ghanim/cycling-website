@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+/* navbar */
+
+.nav-links {
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: sticky;
+}
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+}
+.nav-links a:hover {
+  color: rgb(224, 224, 224);
+}
+.nav-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem;
+  z-index: 10;
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  height: 0.2rem;
+  width: 2.5rem;
+  background-color: white;
+  margin: 0.4rem;
+  transition: all 0.3s ease;
+  border-radius: 0.1rem;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(-0.4rem, 0.5rem);
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  transform: rotate(45deg) translate(-0.4rem, -0.5rem);
+}
+/* end of navbar */
+/* banner */
+.banner-container {
+  position: relative;
+  height: 100vh;
+  background: url(./images/pexels-photo-258045.jpeg) center no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+.banner-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: white;
+  max-width: 80%;
+  text-shadow: 0 0 0.8rem #000;
+  padding: 4rem;
+}
+.banner-text h1 {
+  font-size: 7rem;
+  font-weight: 500;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+.banner-text p {
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+@media (max-width: 720px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    width: 35%;
+    right: 0;
+    text-align: center;
+    height: 100%;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+  }
+  .banner-text {
+    padding: 0;
+    width: 50%;
+    top: 10%;
+  }
+  .banner-text h1 {
+    font-size: 5rem;
+  }
+  .banner-text p {
+    font-size: 2rem;
+  }
+  .nav-btn {
+    display: block;
+  }
+  .change .nav-links {
+    transform: translateX(0);
+  }
+}
+
+/* end of banner */
