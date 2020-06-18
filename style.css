@@ -15,7 +15,7 @@ html {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   padding-left: 10rem;
   z-index: 10;
@@ -27,6 +27,8 @@ html {
   text-transform: uppercase;
   padding: 2rem 3rem;
   text-align: center;
+  text-shadow: 0 0.1rem 0.2rem rgb(0, 0, 0);
+  transition: color 0.1s ease;
 }
 .logo {
   position: fixed;
@@ -39,7 +41,7 @@ html {
 }
 
 .nav-links a:hover {
-  color: rgb(224, 224, 224);
+  color: rgb(243, 209, 96);
 }
 .nav-btn {
   position: fixed;
@@ -50,6 +52,7 @@ html {
   display: none;
   cursor: pointer;
 }
+
 .bar {
   height: 0.2rem;
   width: 2.5rem;
@@ -82,7 +85,7 @@ html {
   left: 10%;
   color: white;
   max-width: 80%;
-  text-shadow: 0 0 0.8rem #000;
+  text-shadow: 0 0.1rem 0.7rem rgb(51, 51, 51);
   padding: 4rem;
 }
 .banner-text h1 {
@@ -95,11 +98,27 @@ html {
   font-size: 3rem;
   margin-top: 2rem;
 }
+.banner-text button {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: rgb(255, 255, 255);
+  margin-top: 5rem;
+  background-color: rgb(230, 189, 57);
+  border: none;
+  box-shadow: 0 0 0.8rem rgb(44, 43, 43);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  outline: none;
+  cursor: pointer;
+}
+.banner-text button:hover {
+  background-color: rgb(219, 179, 46);
+}
 @media (max-width: 720px) {
   .nav-links {
     flex-direction: column;
     position: fixed;
-    width: 35%;
+    width: 40%;
     right: 0;
     text-align: center;
     height: 100%;
@@ -265,8 +284,9 @@ html {
   text-align: center;
   text-transform: uppercase;
   margin: 5rem;
-  color: rgb(36, 36, 36);
+  color: rgb(70, 70, 70);
   font-weight: 500;
+  text-shadow: 0 0.1rem 0.2rem rgb(138, 138, 138);
 }
 .news-container {
   width: 80vw;
@@ -279,9 +299,8 @@ html {
     "one one four five";
 }
 .news-item {
-  /* padding-bottom: 2rem; */
   margin: 0.5rem;
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(48, 48, 48);
 }
 .news-item img {
   width: 100%;
@@ -304,7 +323,7 @@ a .news-title {
   transition: all 0.2s ease;
 }
 a .news-title:hover {
-  color: rgb(197, 197, 197);
+  color: rgb(243, 209, 96);
 }
 
 .news-paragraph {
@@ -314,7 +333,7 @@ a .news-title:hover {
   transition: all 0.2s ease;
 }
 .news-paragraph:hover {
-  color: rgb(197, 197, 197);
+  color: rgb(243, 209, 96);
 }
 .item1 {
   grid-area: one;
@@ -377,6 +396,35 @@ a .news-title:hover {
   font-weight: 700;
   text-align: center;
   margin: 0 1rem;
+  opacity: 0;
+}
+#ad ul li:nth-child(1) {
+  animation: faded 9s 0s infinite;
+}
+#ad ul li:nth-child(2) {
+  animation: faded 9s 3s infinite;
+  color: rgb(230, 189, 57);
+}
+#ad ul li:nth-child(3) {
+  animation: faded 9s 6s infinite;
+}
+
+@keyframes faded {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @media (max-width: 1100px) {
   #ad ul li {
@@ -532,7 +580,7 @@ a .news-title:hover {
 }
 #social-media i:hover {
   transform: translateY(-0.5rem);
-  color: rgb(75, 75, 75);
+  color: rgb(223, 183, 55);
 }
 @media (max-width: 720px) {
   #footer {
