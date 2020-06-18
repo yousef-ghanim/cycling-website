@@ -492,7 +492,17 @@ a .news-title:hover {
   box-shadow: 0 0.5rem 1rem rgb(116, 116, 116);
   text-shadow: 0 0.5rem 1rem rgb(116, 116, 116);
   cursor: pointer;
+  transition: all 0.2s ease;
 }
+.submit:hover {
+  background-color: rgb(219, 179, 46);
+}
+@media (max-width: 1000px) {
+  .contact-container {
+    width: 60%;
+  }
+}
+
 @media (max-width: 720px) {
   .contact-left {
     width: 0;
@@ -502,3 +512,35 @@ a .news-title:hover {
   }
 }
 /* end of contact */
+
+/* footer */
+#footer {
+  padding: 3rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer h1 {
+  font-weight: 500;
+  color: rgb(49, 49, 49);
+}
+#social-media i {
+  font-size: 3rem;
+  margin: 0 2rem;
+  color: rgb(39, 39, 39);
+  transition: all 0.3s ease;
+}
+#social-media i:hover {
+  transform: translateY(-0.5rem);
+  color: rgb(75, 75, 75);
+}
+@media (max-width: 720px) {
+  #footer {
+    flex-direction: column;
+  }
+  #footer h1 {
+    margin-top: 1rem;
+    order: 2;
+  }
+}
+/* end of footer */
