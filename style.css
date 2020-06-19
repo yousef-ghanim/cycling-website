@@ -12,7 +12,7 @@ html {
 .nav-links {
   margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.9);
@@ -25,15 +25,15 @@ html {
   font-size: 1.5rem;
   color: white;
   text-transform: uppercase;
-  padding: 2rem 3rem;
+  padding: 2rem 5rem;
   text-align: center;
   text-shadow: 0 0.1rem 0.2rem rgb(0, 0, 0);
   transition: color 0.1s ease;
 }
 .logo {
   position: fixed;
-  width: 4.5rem;
-  top: 1rem;
+  width: 5rem;
+  top: 0.6rem;
   left: 4rem;
   cursor: pointer;
   z-index: 30;
@@ -82,12 +82,14 @@ html {
 .img-container {
   height: 100%;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 #banner-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
   animation: bg-zoom 25s;
+  opacity: 0.7;
 }
 @keyframes bg-zoom {
   0% {
@@ -99,11 +101,11 @@ html {
 }
 .banner-text {
   position: absolute;
-  top: 20%;
-  left: 10%;
+  top: 30%;
+  left: 8%;
   color: white;
   max-width: 80%;
-  text-shadow: 0 0.1rem 0.7rem rgb(51, 51, 51);
+  text-shadow: 0 0.2rem 0.4rem rgb(41, 41, 41);
   padding: 4rem;
 }
 .banner-text h1 {
@@ -153,13 +155,17 @@ html {
   .nav-links {
     flex-direction: column;
     position: fixed;
-    width: 40%;
+    justify-content: center;
+    width: 20%;
     right: 0;
     text-align: center;
     height: 100%;
     transform: translateX(100%);
     transition: all 0.3s ease;
     padding: 0;
+  }
+  .nav-links a {
+    margin: 5rem 0;
   }
   .banner-text {
     padding: 0;
@@ -187,17 +193,24 @@ html {
 /* end of banner */
 /* article */
 #article {
-  padding: 5rem 5rem 10rem 5rem;
-  background-color: rgb(36, 36, 36);
+  padding: 5rem;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.363),
+      rgba(255, 255, 255, 0.411)
+    ),
+    url(./images/article-bg.jpg) center no-repeat fixed;
+  background-size: cover;
 }
 .article-container {
-  margin: 0 10rem;
+  margin: 10rem auto;
+  width: 80%;
 }
 .article-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 5rem 0;
+
+  margin: 7rem 0;
 }
 .img-frame {
   position: relative;
@@ -207,65 +220,79 @@ html {
   position: absolute;
   content: "";
   border: 1rem solid rgb(252, 151, 213);
-  top: 2rem;
-  right: -4rem;
+  top: -4rem;
+  right: 2rem;
   height: 100%;
   width: 100%;
   box-shadow: 0 0 1rem #000;
 }
 .article-img {
   width: 100%;
-  box-shadow: 0 0 1rem #000;
+  box-shadow: 0 0.2rem 0.3rem rgb(58, 58, 58);
 }
 .img-frame2 {
   position: relative;
-  width: 35%;
+  width: 50%;
 }
 .img-frame2:before {
+  border: 1rem solid rgb(61, 189, 240);
   position: absolute;
   content: "";
-  border: 1rem solid rgb(61, 189, 240);
   top: 2rem;
   right: -4rem;
   height: 100%;
   width: 100%;
-  box-shadow: 0 0 1rem #000;
-}
-.article-img2 {
-  width: 100%;
-  box-shadow: 0 0 1rem #000;
+  box-shadow: 0 0 1rem rgb(58, 58, 58);
 }
 
 .article-text {
   position: relative;
-  margin-left: 5rem;
-  width: 30%;
-}
-.article-text2 {
+  margin: 0 5rem;
   width: 50%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem 2rem 4rem 2rem;
+  box-shadow: 0 0.2rem 0.3rem rgb(56, 56, 56);
 }
+
 .article-text h1 {
   font-size: 3rem;
-  margin-bottom: 3rem;
   text-transform: capitalize;
   color: rgb(255, 255, 255);
   font-weight: 400;
 }
 .article-text p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: rgb(255, 255, 255);
   line-height: 3rem;
+  text-align: justify;
+}
+.line {
+  width: 40%;
+  height: 0.3rem;
+  background-color: rgb(252, 151, 213);
+  margin-bottom: 2rem;
+}
+.line2 {
+  width: 40%;
+  height: 0.3rem;
+  background-color: rgb(61, 189, 240);
+  margin-bottom: 2rem;
 }
 .article-text a {
   position: absolute;
   right: 2rem;
   font-size: 1.5rem;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(230, 189, 57);
   font-weight: 500;
+  border: 0.1rem solid rgb(230, 189, 57);
+  padding: 0.5rem;
+  bottom: 0.5rem;
 }
 .article-text a:hover {
-  color: rgb(230, 189, 57);
+  background-color: rgb(230, 189, 57);
+  color: white;
   transition: all 0.2s ease;
 }
 .article-text a i {
@@ -274,40 +301,44 @@ html {
 .article-text a:hover i {
   transform: translateX(50%);
 }
-@media (max-width: 1300px) {
-  .article-text {
-    width: 50%;
-  }
-  .article-text1 {
-    margin-left: 7rem;
-  }
-}
-@media (max-width: 1000px) {
-  .article-item {
-    flex-direction: column;
-    padding-top: 5rem;
-  }
-  .article-text {
-    order: 2;
-    margin-top: 7rem;
-    width: 70%;
-  }
-  .article-text1 {
-    margin-left: 0;
-  }
-  #article {
-    padding: 3rem;
-  }
+@media (max-width: 1200px) {
   .article-container {
-    margin: 0;
+    width: 90%;
+  }
+  .article-text p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .article-text h1 {
+    font-size: 2.5rem;
   }
   .img-frame {
-    width: 70%;
+    width: 60%;
   }
   .img-frame2 {
     width: 60%;
   }
 }
+@media (max-width: 1000px) {
+  .article-container {
+    width: 100%;
+  }
+  .article-item {
+    flex-direction: column;
+  }
+  .img-frame {
+    width: 80%;
+  }
+  .img-frame2 {
+    width: 80%;
+  }
+  .article-text {
+    order: 2;
+    margin-top: 5rem;
+    width: 80%;
+  }
+}
+
 /* end of article */
 
 /* news */
@@ -335,7 +366,7 @@ html {
     "one one four five";
 }
 .news-item {
-  margin: 0.5rem;
+  margin: 1rem;
   background-color: rgb(48, 48, 48);
   box-shadow: 0 0.1rem 0.3rem rgb(65, 65, 65);
 }
@@ -349,8 +380,8 @@ html {
   transition: all 1s ease;
 }
 .news-item img:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  opacity: 0.5;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  opacity: 0.3;
   transform: scale(1.1);
 }
 .news-item a {
@@ -361,7 +392,7 @@ a .news-title {
   margin: 1rem;
   font-size: 2rem;
   text-transform: capitalize;
-  font-weight: 400;
+  font-weight: 300;
   transition: all 0.2s ease;
 }
 a .news-title:hover {
@@ -479,7 +510,8 @@ a .news-title:hover {
 #contact {
   height: 100vh;
   width: 100%;
-  background-color: rgb(37, 37, 37);
+  background: url(./images/contact-bg.jpg) center no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -489,7 +521,7 @@ a .news-title:hover {
   background-color: rgb(238, 238, 238);
   height: 50rem;
   width: 50%;
-  box-shadow: 0 0.3rem 3rem #000;
+  box-shadow: 0 0.2rem 0.5rem rgb(53, 53, 53);
 }
 .contact-left {
   width: 35%;
@@ -609,6 +641,7 @@ a .news-title:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: rgb(241, 241, 241);
 }
 #footer h1 {
   font-weight: 500;
