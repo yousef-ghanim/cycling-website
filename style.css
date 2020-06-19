@@ -10,7 +10,6 @@ html {
 /* navbar */
 
 .nav-links {
-  top: 0;
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -37,7 +36,7 @@ html {
   top: 1rem;
   left: 4rem;
   cursor: pointer;
-  z-index: 20;
+  z-index: 30;
   opacity: 1;
 }
 
