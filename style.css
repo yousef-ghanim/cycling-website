@@ -449,7 +449,7 @@ html {
   width: 100%;
   transition: all 1s ease;
 }
-.news-item img:hover {
+.news-item:hover img {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
   opacity: 0.3;
   transform: scale(1.1);
@@ -465,7 +465,7 @@ a .news-title {
   font-weight: 300;
   transition: all 0.2s ease;
 }
-a .news-title:hover {
+.news-item:hover .news-title {
   color: rgb(243, 209, 96);
 }
 
@@ -475,7 +475,7 @@ a .news-title:hover {
   line-height: 2rem;
   transition: all 0.2s ease;
 }
-.news-paragraph:hover {
+.news-item:hover .news-paragraph {
   color: rgb(243, 209, 96);
 }
 .item1 {
