@@ -413,7 +413,7 @@ html {
       rgba(255, 255, 255, 0.2),
       rgba(255, 255, 255, 0.2)
     ),
-    url(./images/news-bg.jpeg) center no-repeat;
+    url(./images/news-bg.jpeg) center no-repeat fixed;
   background-size: cover;
 }
 #news-header {
@@ -421,9 +421,9 @@ html {
   text-align: center;
   text-transform: uppercase;
   margin: 5rem;
-  color: rgb(70, 70, 70);
+  color: rgb(255, 255, 255);
   font-weight: 500;
-  text-shadow: 0 0.1rem 0.2rem rgb(138, 138, 138);
+  text-shadow: 0 0.1rem 0.2rem rgb(46, 46, 46);
 }
 .news-container {
   width: 80vw;
