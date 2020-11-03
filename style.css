@@ -32,8 +32,8 @@ html {
 }
 .logo {
   position: fixed;
-  width: 5rem;
-  top: 0.6rem;
+  width: 3rem;
+  top: 1rem;
   left: 4rem;
   cursor: pointer;
   z-index: 30;
@@ -60,6 +60,7 @@ html {
   margin: 0.4rem;
   transition: all 0.3s ease;
   border-radius: 0.1rem;
+  border: 0.01rem solid rgb(49, 49, 49);
 }
 .change .bar1 {
   transform: rotate(-45deg) translate(-0.4rem, 0.5rem);
@@ -82,7 +83,7 @@ html {
 .img-container {
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 1);
 }
 #banner-bg {
   width: 100%;
@@ -174,7 +175,7 @@ html {
   }
   .logo {
     left: 0.5rem;
-    width: 4rem;
+    width: 3rem;
   }
   .banner-text h1 {
     font-size: 5rem;
@@ -194,12 +195,14 @@ html {
 /* article */
 #article {
   padding: 5rem;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.363),
-      rgba(255, 255, 255, 0.411)
+  /* background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
     ),
     url(./images/article-bg.jpg) center no-repeat fixed;
-  background-size: cover;
+  background-size: cover; */
+  /* background-color: rgb(63, 35, 35); */
+  background-color: rgb(255, 255, 255);
 }
 .article-container {
   margin: 10rem auto;
@@ -216,54 +219,55 @@ html {
   position: relative;
   width: 50%;
 }
-.img-frame:before {
+.img-frame::before {
   position: absolute;
   content: "";
-  border: 1rem solid rgb(252, 151, 213);
-  top: -4rem;
+  border: 0.5rem solid rgb(252, 151, 213);
+  top: -3rem;
   right: 2rem;
   height: 100%;
   width: 100%;
-  box-shadow: 0 0 1rem #000;
+  /* box-shadow: 0 0 1rem #000; */
 }
+
 .article-img {
   width: 100%;
-  box-shadow: 0 0.2rem 0.3rem rgb(58, 58, 58);
+  /* box-shadow: 0 0.2rem 0.3rem rgb(58, 58, 58); */
+  position: relative;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgb(139, 139, 139);
 }
 .img-frame2 {
   position: relative;
   width: 50%;
 }
 .img-frame2:before {
-  border: 1rem solid rgb(61, 189, 240);
+  border: 0.5rem solid rgb(61, 189, 240);
   position: absolute;
   content: "";
   top: 2rem;
-  right: -4rem;
+  right: -3rem;
   height: 100%;
   width: 100%;
-  box-shadow: 0 0 1rem rgb(58, 58, 58);
 }
 
 .article-text {
   position: relative;
   margin: 0 5rem;
   width: 50%;
-
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem 2rem 4rem 2rem;
-  box-shadow: 0 0.2rem 0.3rem rgb(56, 56, 56);
 }
 
 .article-text h1 {
   font-size: 3rem;
   text-transform: capitalize;
-  color: rgb(255, 255, 255);
-  font-weight: 400;
+  /* color: rgb(255, 255, 255); */
+  color: rgb(58, 58, 58);
+  font-weight: 500;
 }
 .article-text p {
   font-size: 1.7rem;
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255); */
+  color: rgb(58, 58, 58);
   line-height: 3rem;
   text-align: justify;
 }
@@ -409,21 +413,24 @@ html {
 #news {
   padding: 5rem 5rem 15rem 5rem;
   /* background-color: rgb(241, 241, 241); */
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.2)
-    ),
-    url(./images/news-bg.jpeg) center no-repeat fixed;
-  background-size: cover;
+  background-color: rgb(255, 255, 255);
 }
 #news-header {
   font-size: 4rem;
   text-align: center;
   text-transform: uppercase;
-  margin: 5rem;
-  color: rgb(255, 255, 255);
+  margin-top: 5rem;
+  color: rgb(43, 43, 43);
   font-weight: 500;
   text-shadow: 0 0.1rem 0.2rem rgb(46, 46, 46);
+}
+.news-header-underline {
+  background-color: rgb(43, 43, 43);
+  width: 15rem;
+  height: 0.4rem;
+  box-shadow: 0 0.1rem 0.2rem rgb(46, 46, 46);
+  margin: 1rem auto 5rem auto;
+  border-radius: 0.3rem;
 }
 .news-container {
   width: 80vw;
@@ -524,7 +531,8 @@ a .news-title {
 }
 .contact-container {
   display: flex;
-  background-color: rgb(238, 238, 238);
+  /* background-color: rgb(238, 238, 238); */
+  background-color: rgb(255, 255, 255);
   height: 50rem;
   width: 50%;
   box-shadow: 0 0.2rem 0.5rem rgb(53, 53, 53);
@@ -644,7 +652,8 @@ a .news-title {
 /* footer */
 #footer {
   padding: 3rem 5rem 1rem 5rem;
-  background-color: rgb(241, 241, 241);
+  /* background-color: rgb(241, 241, 241); */
+  background-color: rgb(255, 255, 255);
 }
 .social-container {
   display: flex;
@@ -656,7 +665,8 @@ a .news-title {
   color: rgb(66, 66, 66);
 }
 .social-container h1 img {
-  width: 5rem;
+  width: 3rem;
+  margin-right: 1rem;
   vertical-align: middle;
   cursor: pointer;
 }
