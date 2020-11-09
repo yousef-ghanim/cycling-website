@@ -736,5 +736,11 @@ a .news-title {
   #social-media {
     margin-top: 2rem;
   }
+  .article-text p {
+    line-height: normal;
+  }
+  #social-media i {
+    margin: 0 1.5rem;
+  }
 }
 /* end of footer */
