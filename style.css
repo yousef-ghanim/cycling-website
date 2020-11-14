@@ -738,6 +738,8 @@ a .news-title {
   }
   .article-text p {
     line-height: normal;
+    text-align: left;
+    font-size: 1.2rem;
   }
   #social-media i {
     margin: 0 1.5rem;
